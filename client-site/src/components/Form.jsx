@@ -8,7 +8,11 @@ const Form = () => {
   const [amount, setAmount] = useState("");
 
   const disPatch = useDispatch()
-
+  const reset = ()=>{
+    setName('')
+    setType('')
+    setAmount('')
+  }
   const handleSubmit =(e)=>{
     e.preventDefault();
     disPatch(createTransaction({
@@ -16,6 +20,7 @@ const Form = () => {
       type,
       amount: Number(amount)
     }))
+    reset()
   }
   return (
     <div className="form">
@@ -27,6 +32,7 @@ const Form = () => {
             type="text"
             name="name"
             placeholder="Mini Job"
+            value={name}
             onChange={(e) => setName(e.target.value)}
           />
         </div>
@@ -38,6 +44,7 @@ const Form = () => {
               type="radio"
               value="income"
               name="type"
+              checked={type === "income"}
               onChange={() => setType("income")}
             />
             <label>Income</label>
@@ -47,6 +54,7 @@ const Form = () => {
               type="radio"
               value="expense"
               name="type"
+              checked={type === "expense"}
               placeholder="Expense"
               onChange={() => setType("expense")}
             />
@@ -60,10 +68,13 @@ const Form = () => {
             type="number"
             placeholder="300"
             name="transaction_amount"
+            value={amount}
             onChange={(e) => setAmount(e.target.value)}
           />
         </div>
-        <button type="submit" className="btn">Add Transaction</button>
+        <button type="submit" className="btn">
+          Add Transaction
+        </button>
       </form>
 
       <button className="btn cancel_edit">Cancel Edit</button>

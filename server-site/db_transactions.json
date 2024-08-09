@@ -1,34 +1,16 @@
 {
   "transactions": [
     {
-      "name": "From MiniJob",
+      "name": "Mini job",
       "type": "income",
-      "amount": 640,
+      "amount": 550,
       "id": 1
     },
     {
-      "name": "family expense",
-      "type": "expense",
-      "amount": 120,
-      "id": 2
-    },
-    {
-      "name": "big salary",
-      "type": "income",
-      "amount": 50000,
-      "id": 3
-    },
-    {
-      "name": "Mini Job",
-      "type": "income",
-      "amount": 5000,
-      "id": 4
-    },
-    {
-      "name": "Mini Job 3",
+      "name": "Computer",
       "type": "expense",
       "amount": 200,
-      "id": 5
+      "id": 2
     }
   ]
 }
