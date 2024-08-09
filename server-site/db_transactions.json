@@ -7,10 +7,16 @@
       "id": 1
     },
     {
-      "name": "load",
+      "name": "Phone load",
       "type": "expense",
       "amount": 50,
       "id": 2
+    },
+    {
+      "name": "",
+      "type": "",
+      "amount": 0,
+      "id": 3
     }
   ]
 }

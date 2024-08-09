@@ -75,7 +75,7 @@ const Form = () => {
           <input
             type="text"
             name="name"
-            placeholder="Mini Job"
+            placeholder="ex: Mini Job"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
