@@ -1,15 +1,15 @@
 {
   "transactions": [
     {
-      "name": "Mini job",
+      "name": "Mini Job",
       "type": "income",
-      "amount": 550,
+      "amount": 5000,
       "id": 1
     },
     {
-      "name": "Computer",
+      "name": "load",
       "type": "expense",
-      "amount": 200,
+      "amount": 50,
       "id": 2
     }
   ]

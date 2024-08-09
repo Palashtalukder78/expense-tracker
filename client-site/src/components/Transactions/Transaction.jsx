@@ -1,7 +1,9 @@
+/* eslint-disable react/prop-types */
 import editImg from "../../assets/images/edit.svg"
 import deleteImg from "../../assets/images/delete.svg"
 import { useDispatch } from "react-redux";
-import { removeTransaction } from "../../features/transaction/transactionSlice";
+import { editActive, removeTransaction } from "../../features/transaction/transactionSlice";
+import { numberWithCommas } from "../../utils/numberWithCommas";
 
 const Transaction = ({ transaction }) => {
   const {id, name,type, amount} = transaction || {};
@@ -11,12 +13,16 @@ const Transaction = ({ transaction }) => {
   const handleDelete =()=>{
     dispatch(removeTransaction(id))
   }
+  
+  const handleEdit =()=>{
+    dispatch(editActive(transaction))
+  }
   return (
     <li className={`transaction ${type}`}>
       <p>{name}</p>
       <div className="right">
-        <p>৳ {amount}</p>
-        <button className="link">
+        <p>৳ {numberWithCommas(amount)}</p>
+        <button className="link" onClick={handleEdit}>
           <img className="icon" src={editImg} />
         </button>
         <button className="link" onClick={handleDelete}>
