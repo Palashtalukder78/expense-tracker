@@ -1,0 +1,22 @@
+{
+  "transactions": [
+    {
+      "name": "From MiniJob",
+      "type": "income",
+      "amount": 640,
+      "id": 1
+    },
+    {
+      "name": "family expense",
+      "type": "expense",
+      "amount": 120,
+      "id": 2
+    },
+    {
+      "name": "big salary",
+      "type": "income",
+      "amount": 50000,
+      "id": 3
+    }
+  ]
+}
