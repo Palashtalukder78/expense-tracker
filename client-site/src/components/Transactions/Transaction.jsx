@@ -1,4 +1,5 @@
-
+import editImg from "../../assets/images/edit.svg"
+import deleteImg from "../../assets/images/delete.svg"
 
 const Transaction = () => {
     return (
@@ -7,10 +8,10 @@ const Transaction = () => {
         <div className="right">
           <p>৳ 100</p>
           <button className="link">
-            <img className="icon" src="./images/edit.svg" />
+            <img className="icon" src={editImg} />
           </button>
           <button className="link">
-            <img className="icon" src="./images/delete.svg" />
+            <img className="icon" src={deleteImg} />
           </button>
         </div>
       </li>
